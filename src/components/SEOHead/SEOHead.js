@@ -2,7 +2,7 @@ import NextHead from "next/head"
 import React from "react"
 
 const SEOHead = ({ title, description, url, ogImage }) => {
-  const joinedTitle = title ? `${title} | Namee3` : "Namee3 "
+  const joinedTitle = title ? `${title} | Namee3` : "Namee3"
 
   return (
     <NextHead>
