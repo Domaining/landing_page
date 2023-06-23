@@ -353,7 +353,7 @@ module.exports = {
       DEFAULT: "1",
     },
     fontFamily: {
-      "clash-Display": ['Clash Display', "sans-serif"],  
+      "clash-display": ['Clash Display', "sans-serif"],  
       "satoshi": ['Satoshi', "sans-serif"],
       inter: ["Inter", "sans-serif"],
 
