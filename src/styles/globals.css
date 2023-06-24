@@ -2,15 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,1,300&f[]=satoshi@1,900,700,500,301,701,300,501,401,901,400,2&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@700,500,301,701,300,501,401,400&display=swap");
 
+@import url("https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&display=swap");
 
 @import "./animate.css";
 
-/* @font-face {
-  font-family: "clash-display";
-  src: url("../fonts/NOVASQUARE.TTF");
-} */
+@font-face {
+  font-family: 'Clash Display';
+  src: url("../fonts/ClashDisplay-Bold.otf");
+}
+@font-face {
+  font-family: "satoshi";
+  src: url("../fonts/Satoshi-Regular.otf");
+}
 
 * {
   margin: 0;
@@ -24,9 +29,8 @@ html {
 * button {
   transition: all 1s ease-in-out;
 }
-* button:hover{
+* button:hover {
   transition: all 1s ease-in-out;
-  
 }
 /* button hover effects */
 
@@ -47,7 +51,7 @@ html {
   left: 0;
   right: 100%;
   bottom: 0;
-  background: #F6F6F6;
+  background: #f6f6f6;
   height: 4px;
   -webkit-transition-property: right;
   transition-property: right;
@@ -61,7 +65,6 @@ html {
 .underlineFromLeft:active:before {
   right: 0;
 }
-
 
 @media all and (min-width: 0px) {
   .wrapper {
