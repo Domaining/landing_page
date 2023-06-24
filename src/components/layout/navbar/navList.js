@@ -33,19 +33,14 @@ const NavList = ({ isClicked, handleClick }) => {
                 className="mb-5"
                 href="/#about"
                 handleClick={handleClick}
-                children={"Learn"}
+                children={"About"}
               ></ActiveLink>
               <ActiveLink
                 className=""
                 href="/#faq"
                 handleClick={handleClick}
-                children={"Commuinity"}
+                children={"FAQ"}
               ></ActiveLink>
-            </div>
-
-            {/* social media icon */}
-            <div className="mt-auto mb-24">
-              <Socials />
             </div>
           </ul>
         </ul>
