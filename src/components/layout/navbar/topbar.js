@@ -4,7 +4,7 @@ import React from "react"
 
 const TopBar = ({ isClicked, handleClick }) => {
   return (
-    <header className="bg-green1 py-5 lg:py-10 font-inter relative z-30 ">
+    <header className="bg-white py-5 lg:py-5 font-inter relative z-30 ">
       <nav className="wrapper">
         <ul className="flex items-center justify-between">
           <li>
@@ -36,15 +36,15 @@ const TopBar = ({ isClicked, handleClick }) => {
             ></ActiveLink>
             <ActiveLink
               className="mx-[36.5px]"
-              href="https://quatre-finance-docs.vercel.app/"
+              href="/#about"
               handleClick={undefined}
-              children={"Learn"}
+              children={"About"}
             ></ActiveLink>
             <ActiveLink
               className="mx-[36.5px]"
-              href="/#footer"
+              href="/#faq"
               handleClick={undefined}
-              children={"Community"}
+              children={"FAQ"}
             ></ActiveLink>
           </div>
           <li className="hidden lg:flex">
@@ -52,10 +52,10 @@ const TopBar = ({ isClicked, handleClick }) => {
               <button
                 className={[
                   "underlineFromLeft", // css code in global.css
-                  "font-bold bg-orange w-[174px] h-[60px] rounded-lg text-white1",
+                  "font-bold bg-blue1 w-[172px] h-[70px] rounded-[40px] text-white",
                 ].join(" ")}
               >
-                Go To App
+              Launch App
               </button>
             </a>
           </li>
