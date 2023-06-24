@@ -31,13 +31,13 @@ const NavList = ({ isClicked, handleClick }) => {
               ></ActiveLink>
               <ActiveLink
                 className="mb-5"
-                href="https://quatre-finance-docs.vercel.app/"
+                href="/#about"
                 handleClick={handleClick}
                 children={"Learn"}
               ></ActiveLink>
               <ActiveLink
                 className=""
-                href="/#footer"
+                href="/#faq"
                 handleClick={handleClick}
                 children={"Commuinity"}
               ></ActiveLink>

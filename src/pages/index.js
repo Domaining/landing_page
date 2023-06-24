@@ -14,7 +14,7 @@ const Home = ({ isClicked }) => {
         {/* <TransparenLayer isClicked={isClicked} /> */}
         <Hero />
       
-        <Solutions />
+        {/* <Solutions /> */}
       </main>
     </>
   )
