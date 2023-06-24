@@ -1,12 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-  faDiscord,
-  faTwitter,
-  faYoutube,
-  faInstagram,
-  faReddit,
-} from "@fortawesome/free-brands-svg-icons"
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import React from "react"
 import Socials from "../socials"
 import Link from "next/link"
@@ -14,66 +5,44 @@ import Link from "next/link"
 const Footer = () => {
   return (
     <footer
-      className="bg-gray1 py-12 lg:py-[6rem] text-white font-inter"
+      className="bg-black1 py-12 lg:py-[6rem] w-full text-white font-satoshi "
       id="footer"
     >
-      <div className="wrapper flex flex-col lg:flex-row justify-between">
-        <ul className="mb-[40px]">
-          <li>
-            <h1 className="font-nova-square text-3xl lg:text-5xl mb-[16px] lg:mb-[24px] ">
-              QuatreFinance
-            </h1>
+      <div className="wrapper">
+        <ul className="flex flex-col lg:flex-row lg:justify-between lg:items-center ">
+          <li className="mb-5">
+            <div className="flex flex-col ">
+              <div>
+                <img src="images/navbar/logo.svg" alt="logo" />
+              </div>
+              <div className="text-lg ">
+                &copy;2023 QuatreFinance. All rights reserved.
+              </div>
+            </div>
           </li>
-          <Socials />
-          <li className="mt-[16px] lg:mt-[24px] text-lg lg:text-xl">
-            {" "}
-            <a
-              href="mailto:officialemail@gmail.com"
-              target="_blank"
-              rel="noreferrer"
+       
+            <div className="mb-2 lg:m-0">
+              <Link href="./">Home</Link>{" "}
+            </div>
+            <div  className="my-2 lg:m-0">
+              <Link href="./">About</Link>{" "}
+            </div>
+            <div  className="mt-2 mb-5 lg:m-0">
+              <Link href="./">FAQ</Link>
+            </div>
+       
+
+          <li>
+            <button
+              className={[
+                "underlineFromLeft", // css code in global.css
+                "font-bold bg-blue1 w-[172px] h-[70px] rounded-[40px] text-white",
+              ].join(" ")}
             >
-              officialemail@gmail.com
-            </a>
+              Launch App
+            </button>
           </li>
         </ul>
-        <ul className="mb-[40px] lg:mr-[12rem]">
-          <li>
-            <h1 className="text-2xl font-bold mb-[16px] lg:mb-[24px] ">
-              WHAT WE DO
-            </h1>{" "}
-          </li>
-          <li className="text-lg mb-[8px]">
-            <Link href="/">
-              <a>Learn</a>
-            </Link>{" "}
-          </li>
-          <li className="text-lg">
-            <Link href="/">
-              <a>Community</a>
-            </Link>{" "}
-          </li>
-        </ul>
-        <ul className="mb-[40px]">
-          <li>
-            {" "}
-            <h1 className="text-2xl font-bold mb-[16px] lg:mb-[24px] ">
-              COMPANY
-            </h1>{" "}
-          </li>
-          <li className="text-lg mb-[8px]">
-            <Link href="/">
-              <a>About Us</a>
-            </Link>
-          </li>
-          <li className="text-lg">
-            <Link href="/">
-              <a>Privacy Policy</a>
-            </Link>{" "}
-          </li>
-        </ul>
-      </div>
-      <div className="wrapper text-lg lg:text-center lg:pt-[148px]">
-        &copy;2023 QuatreFinance. All rights reserved.
       </div>
     </footer>
   )
