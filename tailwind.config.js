@@ -44,6 +44,7 @@ module.exports = {
       blue1: "#1969FF", //light blue
       black1: "#000714", //black
       "light-grey": "#E6E6E6", // light grey
+      "dark-grey": "#797979",
     }),
     columns: {
       auto: "auto",
