@@ -15,22 +15,18 @@ const Footer = () => {
               <div>
                 <img src="images/navbar/logo.svg" alt="logo" />
               </div>
-              <div className="text-lg ">
-                &copy;2023 QuatreFinance. All rights reserved.
-              </div>
             </div>
           </li>
-       
-            <div className="mb-2 lg:m-0">
-              <Link href="./">Home</Link>{" "}
-            </div>
-            <div  className="my-2 lg:m-0">
-              <Link href="./">About</Link>{" "}
-            </div>
-            <div  className="mt-2 mb-5 lg:m-0">
-              <Link href="./">FAQ</Link>
-            </div>
-       
+
+          <div className="mb-2 lg:m-0">
+            <Link href="./">Home</Link>{" "}
+          </div>
+          <div className="my-2 lg:m-0">
+            <Link href="./">About</Link>{" "}
+          </div>
+          <div className="mt-2 mb-5 lg:m-0">
+            <Link href="./">FAQ</Link>
+          </div>
 
           <li>
             <button
@@ -43,6 +39,7 @@ const Footer = () => {
             </button>
           </li>
         </ul>
+        <div className=" mt-5 lg:m-0">&copy;2023 QuatreFinance. All rights reserved.</div>
       </div>
     </footer>
   )
