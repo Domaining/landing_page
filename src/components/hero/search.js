@@ -1,38 +1,30 @@
-import React from "react";
+import React from "react"
 
 const Search = () => {
   return (
     <section>
-      {/* <div className="flex flex-col xss:flex-row w-full  justify-center font-extrabold mb-10">
-        <a href="">
-          {" "}
-          <button
-            className={[
-              "w-full h-[40px] m-0 mb-3 xss:mb-0 xss:w-[130px]",
-              "xss:h-[40px] lg:w-[312px] lg:h-[60px]",
-              "rounded-lg bg-orange xss:mr-[9px] underlineFromLeft",
-            ].join(" ")}
-          >
-            Go To App
-          </button>
-        </a>
+      <div className="flex flex-col md:flex-row w-full  justify-center font-extrabold mb-10">
+        <div>
+          <input
+            type="text"
+            placeholder="Search your preferred name.fan"
+            className="w-full md:w-[373px] h-[56px] rounded-[100px] text-dark-grey md:mr-4 pl-4 mb-3"
+          />
+        </div>
 
-        <a href="">
-          {" "}
+        <div>
           <button
             className={[
-              "w-full h-[40px] m-0 mb-3 xss:mb-0 border-[1.5px]",
-              "xss:w-[130px] xss:h-[40px] lg:w-[312px] lg:h-[60px]",
-              "rounded-lg bg-tranparent border-white1 xss:ml-[9px]",
+              "underlineFromLeft", // css code in global.css
+              "font-bold bg-blue1 w-full  md:w-[129px] h-[56px] rounded-[40px] text-white",
             ].join(" ")}
           >
-            Learn
+            Search
           </button>
-        </a>
-      </div> */}
-    
+        </div>
+      </div>
     </section>
   )
 }
- 
-export default Search;
+
+export default Search
