@@ -3,22 +3,32 @@ import React from "react"
 export const aboutData = [
   {
     id: 0,
-    sectionTitle: "Who We Are",
-    subTitle: "Who we are and our mission at QuatreFinance",
+    sectionTitle: "About",
+    subTitle: (
+      <h2 className="mb-5 font-clash-displaySemi text-[26px]">
+        Introducing <span className="text-blue1">Namee3 </span> Your Fatom Name
+        Service Protocol
+      </h2>
+    ),
     paragraph1: (
       <p className="mb-5">
-        An ecosystem of decentralized, multifaceted & multifunctional
-        non-custodial protocols for safe crypto and non-crypto dealings.
+        Namee3 Name Service Protocol is a decentralized, open, and extensible
+        naming system that maps human-readable names to machine-readable
+        identifiers on the blockchain. This makes it possible to easily access
+        and interact with blockchain-based applications and services using
+        simple, memorable names.
       </p>
     ),
     paragraph2: (
       <p className="">
-        At QuatreFinance, we harness the potentials of blockchain technology to
-        provide solutions to existing  and emerging problem in societies making
-        the solutions available globally.
+        Our platform leverages the power of blockchain technology to ensure that
+        your domain is truly yours. By registering your domain on the Fantom
+        blockchain, you gain complete ownership and control, eliminating the
+        need to rely on intermediaries or worry about your domain being seized
+        or censored.
       </p>
     ),
-    sectionImage: "images/frame1.svg",
+    sectionImage: "images/about/about.svg",
     sectionName: "About us",
     flexRow: "lg:flex-row",
     flexRowReverse: "lg:flex-row-reverse",
