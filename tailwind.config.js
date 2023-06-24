@@ -42,7 +42,7 @@ module.exports = {
       pink: colors.pink,
       rose: colors.rose,
       blue1: "#1969FF", //light blue
-      black1: "#000714", //black 
+      black1: "#000714", //black
       "light-grey": "#E6E6E6", // light grey
     }),
     columns: {
@@ -353,8 +353,8 @@ module.exports = {
       DEFAULT: "1",
     },
     fontFamily: {
-      "clash-display": ['Clash Display', "sans-serif"],  
-      "satoshi": ['Satoshi', "sans-serif"],
+      "clash-display": ["Clash Display", "sans-serif"],
+      satoshi: ["Satoshi", "sans-serif"],
       inter: ["Inter", "sans-serif"],
 
       sans: [
