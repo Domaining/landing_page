@@ -30,17 +30,16 @@ const SEOHead = ({ title, description, url, ogImage }) => {
       <meta property="og:image:height" content="630" />
       <link rel="icon" href="/favicon.ico" />
       <meta name="msapplication-TileColor" content="#F9F4F4" />
-      <meta name="theme-color" content="#F87C00" />
+      <meta name="theme-color" content="#1969FF" />
     </NextHead>
   )
 }
 
 SEOHead.defaultProps = {
   title: "",
-  description:
-    "Namee3- Own Your Digital Identity",
-  // url: 'https://kingdomofpandaria.com/',
-  ogImage: "images/gallery/1.png", //update img
+  description: "Namee3- Own Your Digital Identity",
+  url: "",
+  ogImage: "", //update img
 }
 
 export default SEOHead
