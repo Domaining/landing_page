@@ -17,7 +17,7 @@ const Accordion = ({}) => {
           className="flex justify-between bg-light-grey px-8 h-[96px] my-auto cursor-pointer"
           onClick={handleClick}
         >
-          <h3 className="text-black1 lg:text-2xl font-satoshiBold font-medium my-auto">
+          <h3 className="text-black1 text-lg lg:text-2xl font-satoshiBold font-medium my-auto">
             {item.question}
           </h3>
           <button className="outline-none">
@@ -37,7 +37,7 @@ const Accordion = ({}) => {
         {activeIndex === item.id && isActive && (
           <span className="flex items-stretch justify-start">
             <div className="w-4 mr-2 bg-blue1 flex items-stretch"></div>
-            <div className={["lg:text-lg text-black1 my-5"].join(" ")}>
+            <div className={["lg:text-lg text-black1 my-5 font-satoshi"].join(" ")}>
               {item.answer}{" "}
             </div>
           </span>
