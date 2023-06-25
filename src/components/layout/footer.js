@@ -5,7 +5,7 @@ import Link from "next/link"
 const Footer = () => {
   return (
     <footer
-      className="bg-black1 py-12 lg:py-[6rem] w-full text-white font-satoshi "
+      className="bg-black1 py-12 lg:py-[6rem] w-full text-white font-satoshi font-medium"
       id="footer"
     >
       <div className="wrapper">
@@ -22,10 +22,10 @@ const Footer = () => {
             <Link href="./">Home</Link>{" "}
           </div>
           <div className="my-2 lg:m-0">
-            <Link href="./">About</Link>{" "}
+            <Link href="./#about">About</Link>{" "}
           </div>
           <div className="mt-2 mb-5 lg:m-0">
-            <Link href="./">FAQ</Link>
+            <Link href="./#faq">FAQ</Link>
           </div>
 
           <li>
