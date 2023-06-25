@@ -28,14 +28,14 @@ const Layout = ({ handleClick, isClicked, children }) => {
     <div className="relative">
       <section
         className={[
-          "fixed h-screen w-full flex justify-center items-center bg-green1 z-50",
+          "fixed h-screen w-full flex justify-center items-center bg-black1 z-50",
           !loading && "hidden",
         ].join(" ")}
       >
         <Spinner size={40} color={"white"} />
       </section>
 
-      <main className="relative font-gothic">
+      <main className="relative">
         <ScrollButton windowIsDefined={windowIsDefined} />
         <NavBar handleClick={handleClick} isClicked={isClicked} />
         {children}
