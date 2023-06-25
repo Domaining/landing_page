@@ -7,7 +7,7 @@ import Faq from "../components/faq/faq"
 const Home = ({}) => {
   return (
     <>
-      <main className="bg-green1 relative">
+      <main className="relative">
         <Hero />
         <About />
         <Benefits />
