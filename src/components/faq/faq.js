@@ -6,11 +6,11 @@ import SectionBody from "../sectionBody"
 
 const Faq = () => {
   return (
-    <section className="text-left" id="faq">
+    <section className="text-left  py-10 lg:py-20" id="faq">
       {pageData.map((data) => (
         // @ts-ignore
         <div key={data.id}>
-          <div className="bg-light-white py-10 lg:py-20">
+          <div className="bg-light-white">
             {" "}
             <section className="wrapper">
               <SectionHeader
