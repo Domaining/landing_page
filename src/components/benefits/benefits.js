@@ -10,7 +10,6 @@ const Benefits = () => {
         // @ts-ignore
         <div key={data.id}>
           <div className="bg-light-grey py-10 lg:py-20">
-            {" "}
             <section className="wrapper">
               <SectionHeader
                 sectionTitle={data.sectionTitle}

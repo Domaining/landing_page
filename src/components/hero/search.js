@@ -11,7 +11,6 @@ const Search = () => {
             className="w-full md:w-[373px] h-[56px] rounded-[100px] text-dark-grey md:mr-4 pl-4 mb-3"
           />
         </div>
-
         <div>
           <button
             className={[

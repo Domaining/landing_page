@@ -4,7 +4,6 @@ export const benefitsData = [
   {
     id: 0,
     sectionTitle: "Benefits",
-    // subTitle: "We provide the best solution to existing problems",
     paragraph1: (
       <p className="mb-5">
         <span className="font-satoshiBold">Interoperability - </span>
