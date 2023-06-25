@@ -2,19 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://api.fontshare.com/v2/css?f[]=satoshi@700,500,301,701,300,501,401,400&display=swap");
-
-@import url("https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&display=swap");
-
 @import "./animate.css";
 
+
+/* font face */
 @font-face {
   font-family: 'Clash Display';
   src: url("../fonts/ClashDisplay-Bold.otf");
 }
 @font-face {
-  font-family: "satoshi";
+  font-family: 'Clash DisplaySemibold';
+  src: url("../fonts/ClashDisplay-SemiBold.otf");
+}
+
+@font-face {
+  font-family: 'Satoshi';
   src: url("../fonts/Satoshi-Regular.otf");
+}
+@font-face {
+  font-family: "SatoshiBold";
+  src: url("../fonts/Satoshi-Medium.otf");
 }
 
 * {
