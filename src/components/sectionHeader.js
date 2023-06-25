@@ -3,10 +3,10 @@ import React from "react"
 const SectionHeader = ({ sectionTitle, subTitle }) => {
   return (
     <header>
-      <h2 className="font-nova-square text-[32px] lg:text-5xl xl:text-6xl mb-2 tracking-[-0.095em]">
+      <h2 className="font-clash-display text-blue1 text-[40px] mb-2 before:border-l-4  before:mr-2 before:border-blue1">
         {sectionTitle}
       </h2>
-      <p className="w-9/12 lg:mx-auto tracking-[-0.03em]">{subTitle}</p>
+      {/* <p className="w-9/12 lg:mx-auto">{subTitle}</p> */}
     </header>
   )
 }

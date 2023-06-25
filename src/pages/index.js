@@ -1,20 +1,17 @@
 import React from "react"
 import About from "../components/about/about"
 import Hero from "../components/hero/hero"
-import Problems from "../components/problems/problems"
-import Solutions from "../components/solutions/solutions"
-// import SEOHead from "../components/SEOHead/SEOHead"
-// import TransparenLayer from "../components/transparentLayer"
+import Benefits from "../components/benefits/benefits"
+import Faq from "../components/faq/faq"
 
-const Home = ({ isClicked }) => {
+const Home = ({}) => {
   return (
     <>
       <main className="bg-green1 relative">
-        {/* white transparent layer when navbar toggle button is clicked  */}
-        {/* <TransparenLayer isClicked={isClicked} /> */}
         <Hero />
-      
-        {/* <Solutions /> */}
+        <About />
+        <Benefits />
+        <Faq />
       </main>
     </>
   )
