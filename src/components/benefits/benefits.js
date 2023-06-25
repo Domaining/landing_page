@@ -1,7 +1,7 @@
-import React from "react"
-import SectionBody from "../sectionBody"
-import SectionHeader from "../sectionHeader"
-import { benefitsData } from "./data"
+import React from "react";
+import SectionBody from "../sectionBody";
+import SectionHeader from "../sectionHeader";
+import { benefitsData } from "./data";
 
 const Benefits = () => {
   return (
@@ -14,7 +14,7 @@ const Benefits = () => {
             <section className="wrapper">
               <SectionHeader
                 sectionTitle={data.sectionTitle}
-                subTitle={undefined} 
+                subTitle={undefined}
               />
               <SectionBody
                 paragraph1={data.paragraph1}
@@ -32,7 +32,7 @@ const Benefits = () => {
         </div>
       ))}
     </section>
-  )
-}
+  );
+};
 
-export default Benefits
+export default Benefits;

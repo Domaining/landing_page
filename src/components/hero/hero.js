@@ -1,6 +1,6 @@
-import React from "react"
+import React from "react";
 // @ts-ignore
-import Search from "./search"
+import Search from "./search";
 const Hero = () => {
   return (
     <section className="relative mb-10 bg-light-grey font-satoshi">
@@ -42,7 +42,7 @@ const Hero = () => {
         <Search />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

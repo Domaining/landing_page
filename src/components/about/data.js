@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 export const aboutData = [
   {
@@ -33,4 +33,4 @@ export const aboutData = [
     flexRow: "lg:flex-row",
     flexRowReverse: "lg:flex-row-reverse",
   },
-]
+];

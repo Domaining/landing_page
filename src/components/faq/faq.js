@@ -1,8 +1,8 @@
-import React from "react"
-import Accordion from "./accordion"
-import { pageData } from "./data"
-import SectionHeader from "../sectionHeader"
-import SectionBody from "../sectionBody"
+import React from "react";
+import Accordion from "./accordion";
+import { pageData } from "./data";
+import SectionHeader from "../sectionHeader";
+import SectionBody from "../sectionBody";
 
 const Faq = () => {
   return (
@@ -32,7 +32,7 @@ const Faq = () => {
         </div>
       ))}
     </section>
-  )
-}
+  );
+};
 
-export default Faq
+export default Faq;
