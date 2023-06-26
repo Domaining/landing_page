@@ -4,7 +4,7 @@ import React from "react"
 
 const TopBar = ({ isClicked, handleClick }) => {
   return (
-    <header className="bg-white py-5 lg:py-5 font-inter relative z-30 ">
+    <header className="bg-white py-5 lg:py-5 font-satoshiBold relative z-30 ">
       <nav className="wrapper">
         <ul className="flex items-center justify-between">
           <li>
@@ -55,7 +55,7 @@ const TopBar = ({ isClicked, handleClick }) => {
                   "font-bold bg-blue1 w-[172px] h-[70px] rounded-[40px] text-white",
                 ].join(" ")}
               >
-              Launch App
+                Launch App
               </button>
             </a>
           </li>
