@@ -358,7 +358,6 @@ module.exports = {
       "clash-displaySemi": ["Clash DisplaySemibold", "sans-serif"],
       satoshi: ["Satoshi", "sans-serif"],
       satoshiBold: ["SatoshiBold", "sans-serif"],
-      inter: ["Inter", "sans-serif"],
 
       sans: [
         "ui-sans-serif",
