@@ -101,6 +101,8 @@ typings/
 # Next.js build output
 
 .next
+/.next/
+/out/
 
 # Nuxt.js build / generate output
 
@@ -139,4 +141,6 @@ dist
 
 # OSX
 
+# misc
 .DS_Store
+*.pem
