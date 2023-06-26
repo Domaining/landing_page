@@ -11,6 +11,7 @@
   font-family: "Clash Display";
   src: url("../fonts/ClashDisplay-Bold.otf");
 }
+
 @font-face {
   font-family: "Clash DisplaySemibold";
   src: url("../fonts/ClashDisplay-Semibold.otf");
@@ -20,6 +21,7 @@
   font-family: "Satoshi";
   src: url("../fonts/Satoshi-Regular.otf");
 }
+
 @font-face {
   font-family: "SatoshiBold";
   src: url("../fonts/Satoshi-Medium.otf");
