@@ -39,7 +39,9 @@ const Footer = () => {
             </button>
           </li>
         </ul>
-        <div className=" mt-5 lg:m-0">&copy;2023 QuatreFinance. All rights reserved.</div>
+        <div className=" mt-5 lg:m-0">
+          &copy;2023 namee3. All rights reserved.
+        </div>
       </div>
     </footer>
   )
