@@ -3,7 +3,7 @@ import React from "react";
 const NameSearch = () => {
   return (
     <section>
-      <div className="flex flex-col w-full  justify-center items-center font-extrabold mb-10">
+      <div className="flex flex-col md:flex-col w-full  justify-center md:items-center font-extrabold mb-10">
         <div>
           <input
             type="text"
