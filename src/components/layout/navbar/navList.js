@@ -2,6 +2,7 @@ import React from "react";
 import Socials from "../../socials";
 import ActiveLink from "./activeLink";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const NavList = ({ isClicked, handleClick }) => {
   const router = useRouter();
