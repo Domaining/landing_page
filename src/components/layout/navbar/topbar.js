@@ -1,8 +1,11 @@
-import ActiveLink from "./activeLink"
-import Link from "next/link"
-import React from "react"
+import ActiveLink from "./activeLink";
+import Link from "next/link";
+import React from "react";
+import { useRouter } from "next/router";
 
 const TopBar = ({ isClicked, handleClick }) => {
+  const router = useRouter();
+  
   return (
     <header className="bg-white py-5 lg:py-5 font-satoshiBold relative z-30 ">
       <nav className="wrapper">
@@ -47,21 +50,37 @@ const TopBar = ({ isClicked, handleClick }) => {
               children={"FAQ"}
             ></ActiveLink>
           </div>
-          <li className="hidden lg:flex">
-            <a href="">
+          {router.pathname === "/app" ? (
+            <li className="hidden lg:flex">
               <button
                 className={[
                   "underlineFromLeft", // css code in global.css
                   "font-bold bg-blue1 w-[172px] h-[70px] rounded-[40px] text-white",
                 ].join(" ")}
+                onClick={() => {
+                  console.log("Connect to wallet here...");
+                }}
               >
-                Launch App
+                Connect Wallet
               </button>
-            </a>
-          </li>
+            </li>
+          ) : (
+            <li className="hidden lg:flex">
+              <Link href="/app">
+                <button
+                  className={[
+                    "underlineFromLeft", // css code in global.css
+                    "font-bold bg-blue1 w-[172px] h-[70px] rounded-[40px] text-white",
+                  ].join(" ")}
+                >
+                  Launch App
+                </button>
+              </Link>
+            </li>
+          )}
         </ul>
       </nav>
     </header>
-  )
-}
-export default TopBar
+  );
+};
+export default TopBar;

@@ -1,8 +1,10 @@
 import React from "react"
 import Socials from "../socials"
 import Link from "next/link"
+import { useRouter } from "next/router";
 
 const Footer = () => {
+  const router = useRouter();
   return (
     <footer
       className="bg-black1 py-12 lg:py-[6rem] w-full text-white font-satoshi font-medium"
@@ -28,16 +30,34 @@ const Footer = () => {
             <Link href="./#faq">FAQ</Link>
           </div>
 
-          <li>
-            <button
-              className={[
-                "underlineFromLeft", // css code in global.css
-                "font-bold bg-blue1 w-[172px] h-[70px] rounded-[40px] text-white",
-              ].join(" ")}
-            >
-              Launch App
-            </button>
-          </li>
+          {router.pathname === "/app" ? (
+            <li className="hidden lg:flex">
+              <button
+                className={[
+                  "underlineFromLeft", // css code in global.css
+                  "font-bold bg-blue1 w-[172px] h-[70px] rounded-[40px] text-white",
+                ].join(" ")}
+                onClick={() => {
+                  console.log("Connect to wallet here...");
+                }}
+              >
+                Connect Wallet
+              </button>
+            </li>
+          ) : (
+            <li className="hidden lg:flex">
+              <Link href="/app">
+                <button
+                  className={[
+                    "underlineFromLeft", // css code in global.css
+                    "font-bold bg-blue1 w-[172px] h-[70px] rounded-[40px] text-white",
+                  ].join(" ")}
+                >
+                  Launch App
+                </button>
+              </Link>
+            </li>
+          )}
         </ul>
         <div className=" mt-5 lg:m-0">
           &copy;2023 namee3. All rights reserved.

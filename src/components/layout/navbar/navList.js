@@ -1,8 +1,10 @@
-import React from "react"
-import Socials from "../../socials"
-import ActiveLink from "./activeLink"
+import React from "react";
+import Socials from "../../socials";
+import ActiveLink from "./activeLink";
+import { useRouter } from "next/router";
 
 const NavList = ({ isClicked, handleClick }) => {
+  const router = useRouter();
   return (
     <section className="relative z-30 font-satoshi font-medium ">
       <nav
@@ -49,20 +51,34 @@ const NavList = ({ isClicked, handleClick }) => {
             </div>
           </ul>
           <li className="mt-20">
-            <a href="">
+            {router.pathname === "/app" ? (
               <button
                 className={[
                   "underlineFromLeft", // css code in global.css
                   "font-bold bg-blue1 w-[170px] h-[50px] text-white rounded-md",
                 ].join(" ")}
+                onClick={() => {
+                  console.log("Connecting wallet...");
+                }}
               >
-                Launch App
+                Connect Wallet
               </button>
-            </a>
+            ) : (
+              <Link href="/app">
+                <button
+                  className={[
+                    "underlineFromLeft", // css code in global.css
+                    "font-bold bg-blue1 w-[170px] h-[50px] text-white rounded-md",
+                  ].join(" ")}
+                >
+                  Launch App
+                </button>
+              </Link>
+            )}
           </li>
         </ul>
       </nav>
     </section>
-  )
-}
-export default NavList
+  );
+};
+export default NavList;
