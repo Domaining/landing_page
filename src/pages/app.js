@@ -1,5 +1,5 @@
-import React from "react"
-import AppHero from "../components/appSection/appHero"
+import React, { useState } from "react";
+import AppHero from "../components/appSection/appHero";
 
 const App = ({}) => {
   return (
@@ -8,7 +8,7 @@ const App = ({}) => {
         <AppHero />
       </main>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

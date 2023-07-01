@@ -21,7 +21,7 @@ const appHero = () => {
 
         <p className="text-black1 text-base text-center mx-auto md:w-9/12 xl:w-8/12 1xl:w-7/12 font-meduim mb-16">
           Imagine having a single domain name that covers all your crypto
-          addresses and <br/>
+          addresses and <br />
           <span>decentralise website</span>
         </p>
 

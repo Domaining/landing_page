@@ -1,11 +1,31 @@
 import ActiveLink from "./activeLink";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/router";
 
 const TopBar = ({ isClicked, handleClick }) => {
   const router = useRouter();
-  
+  const [currentAccount, setCurrentAccount] = useState("");
+  const connectWallet = async () => {
+    try {
+      const { ethereum } = window;
+
+      if (!ethereum) {
+        alert("Get MetaMask -> https://metamask.io/");
+        return;
+      }
+
+      const accounts = await ethereum.request({
+        method: "eth_requestAccounts",
+      });
+
+      console.log("Connected", accounts[0]);
+      setCurrentAccount(accounts[0]);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  console.log(`Current Account => `, currentAccount);
   return (
     <header className="bg-white py-5 lg:py-5 font-satoshiBold relative z-30 ">
       <nav className="wrapper">
@@ -58,10 +78,14 @@ const TopBar = ({ isClicked, handleClick }) => {
                   "font-bold bg-blue1 w-[172px] h-[70px] rounded-[40px] text-white",
                 ].join(" ")}
                 onClick={() => {
-                  console.log("Connect to wallet here...");
+                  connectWallet();
                 }}
               >
-                Connect Wallet
+                {!!currentAccount
+                  ? currentAccount
+                      .slice(0, 6)
+                      .concat(`...${currentAccount.slice(-4)}`)
+                  : "Connect Wallet"}
               </button>
             </li>
           ) : (
