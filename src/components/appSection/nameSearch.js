@@ -86,6 +86,7 @@ const NameSearch = () => {
       console.log("Make sure you have metamask!");
       return;
     } else {
+      connectWallet();
       console.log("We have the ethereum object", ethereum);
     }
 
@@ -211,6 +212,7 @@ const NameSearch = () => {
   // This will run any time currentAccount or network are changed
   useEffect(() => {
     if (network === "Fantom Testnet") {
+      renderInputForm();
       fetchMints();
     }
   }, [currentAccount, network]);
@@ -251,10 +253,15 @@ const NameSearch = () => {
     // If not on Fantom Testnet, render the switch button
     if (network !== "Fantom Testnet") {
       return (
-        <div className="connect-wallet-container">
+        <div className="flex flex-col text-blue1 justify-center items-center">
           <h2>Please switch to Fantom Testnet</h2>
           {/* This button will call our switch network function */}
-          <button className="cta-button mint-button" onClick={switchNetwork}>
+          <button
+            className={[
+              "my-4 font-bold bg-red-500 w-full  md:w-[450px] h-[56px] rounded-[40px] text-white",
+            ].join(" ")}
+            onClick={switchNetwork}
+          >
             Click here to switch
           </button>
         </div>
@@ -284,11 +291,11 @@ const NameSearch = () => {
         </div>
         {/* If the editing variable is true, return the "Set record" and "Cancel" button */}
         {editing ? (
-          <div className="button-container">
+          <div className="flex flex-col">
             {/* This will call the updateDomain function we just made */}
             <button
               className={[
-                "font-bold bg-blue1 w-full  md:w-[450px] h-[56px] rounded-[40px] text-white",
+                "font-bold bg-blue1 w-full  md:w-[450px] h-[56px] rounded-[40px] text-white mb-3",
               ].join(" ")}
               disabled={loading}
               onClick={updateDomain}
@@ -330,42 +337,46 @@ const NameSearch = () => {
   const renderMints = () => {
     if (currentAccount && mints.length > 0) {
       return (
-        <div className="mint-container">
-          <p className="subtitle"> Recently minted domains!</p>
+        <div className="flex flex-col justify-center items-center">
+          <p className="text-blue1"> Recently minted domains!</p>
           <div className="mint-list">
             {mints.map((mint, index) => {
               return (
-                <div className="mint-item" key={index}>
-                  <div className="mint-row">
-                    <a
-                      className="link"
-                      href={`https://testnets.opensea.io/assets/mumbai/${CONTRACT_ADDRESS}/${mint.id}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <p className="underlined">
-                        {" "}
-                        {mint.name}
-                        {tld}{" "}
-                      </p>
-                    </a>
-                    {/* If mint.owner is currentAccount, add an "edit" button*/}
-                    {mint.owner.toLowerCase() ===
-                    currentAccount.toLowerCase() ? (
-                      <button
-                        className="edit-button"
-                        onClick={() => editRecord(mint.name)}
+                <>
+                  <div className="flex flex-row relative" key={index}>
+                    <div className="flex mx-auto px-6 mt-3 justify-between items-center h-[48px] w-[450px] rounded-[24px] bg-white text-gray-500 text-base">
+                      <a
+                        className="link"
+                        href={`https://testnets.opensea.io/assets/mumbai/${CONTRACT_ADDRESS}/${mint.id}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
-                        <img
-                          className="edit-icon"
-                          src="https://img.icons8.com/metro/26/000000/pencil.png"
-                          alt="Edit button"
-                        />
-                      </button>
-                    ) : null}
+                        <p className="underlined">
+                          {mint.name}
+                          {tld}
+                        </p>
+                      </a>
+                      {/* If mint.owner is currentAccount, add an "edit" button*/}
+                      {mint.owner.toLowerCase() ===
+                      currentAccount.toLowerCase() ? (
+                        <button
+                          className="edit-button"
+                          onClick={() => editRecord(mint.name)}
+                        >
+                          <img
+                            className="w-[14px]"
+                            src="https://img.icons8.com/metro/26/000000/pencil.png"
+                            alt="Edit button"
+                          />
+                        </button>
+                      ) : null}
+                    </div>
+                    <p className="absolute bottom-0 px-6 text-gray-400 text-[10px] italic">
+                      {" "}
+                      {mint.record}{" "}
+                    </p>
                   </div>
-                  <p> {mint.record} </p>
-                </div>
+                </>
               );
             })}
           </div>

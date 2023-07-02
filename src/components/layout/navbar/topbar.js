@@ -1,6 +1,6 @@
 import ActiveLink from "./activeLink";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 const TopBar = ({ isClicked, handleClick }) => {
@@ -25,7 +25,7 @@ const TopBar = ({ isClicked, handleClick }) => {
       console.log(error);
     }
   };
-  console.log(`Current Account => `, currentAccount);
+
   return (
     <header className="bg-white py-5 lg:py-5 font-satoshiBold relative z-30 ">
       <nav className="wrapper">
