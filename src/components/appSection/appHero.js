@@ -1,7 +1,7 @@
 import React from "react";
 // @ts-ignore
 import NameSearch from "./nameSearch";
-const appHero = () => {
+const appHero = ({...props}) => {
   return (
     <section className="relative mb-0 bg-light-grey font-satoshi">
       <div className="wrapper py-16 lg:pt-32 text-white flex flex-col justify-center relative z-10">
@@ -25,7 +25,7 @@ const appHero = () => {
           <span>decentralise website</span>
         </p>
 
-        <NameSearch />
+        <NameSearch {...props}/>
       </div>
     </section>
   );

@@ -3,7 +3,8 @@ import Socials from "../socials"
 import Link from "next/link"
 import { useRouter } from "next/router";
 
-const Footer = () => {
+const Footer = ({...props}) => {
+  const {currentAccount, connectWallet} = props;
   const router = useRouter();
   return (
     <footer
@@ -38,10 +39,14 @@ const Footer = () => {
                   "font-bold bg-blue1 w-[172px] h-[70px] rounded-[40px] text-white",
                 ].join(" ")}
                 onClick={() => {
-                  console.log("Connect to wallet here...");
+                  connectWallet();
                 }}
               >
-                Connect Wallet
+                {!!currentAccount
+                  ? currentAccount
+                      .slice(0, 6)
+                      .concat(`...${currentAccount.slice(-4)}`)
+                  : "Connect Wallet"}
               </button>
             </li>
           ) : (

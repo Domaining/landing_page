@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import AppHero from "../components/appSection/appHero";
 
-const App = ({}) => {
+const App = ({ ...props }) => {
   return (
     <>
       <main className="relative">
-        <AppHero />
+        <AppHero {...props} />
       </main>
     </>
   );

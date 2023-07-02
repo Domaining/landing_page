@@ -4,7 +4,8 @@ import ActiveLink from "./activeLink";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-const NavList = ({ isClicked, handleClick }) => {
+const NavList = ({ isClicked, handleClick, ...props }) => {
+  const {currentAccount, connectWallet} = props;
   const router = useRouter();
   return (
     <section className="relative z-30 font-satoshi font-medium ">
@@ -59,10 +60,14 @@ const NavList = ({ isClicked, handleClick }) => {
                   "font-bold bg-blue1 w-[170px] h-[50px] text-white rounded-md",
                 ].join(" ")}
                 onClick={() => {
-                  console.log("Connecting wallet...");
+                  connectWallet();
                 }}
               >
-                Connect Wallet
+                {!!currentAccount
+                  ? currentAccount
+                      .slice(0, 6)
+                      .concat(`...${currentAccount.slice(-4)}`)
+                  : "Connect Wallet"}
               </button>
             ) : (
               <Link href="/app">

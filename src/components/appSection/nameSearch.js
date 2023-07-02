@@ -3,10 +3,10 @@ import { ethers } from "ethers";
 import contractAbi from "../../../utils/contractABI.json";
 import { networks } from "../../../utils/networks";
 
-const NameSearch = () => {
+const NameSearch = ({...props}) => {
+  const {currentAccount, setCurrentAccount, connectWallet} = props;
   const tld = ".ftm";
   const CONTRACT_ADDRESS = "0xbC4642eD76101cB4a8a16b9a3D2438affEa5d227";
-  const [currentAccount, setCurrentAccount] = useState("");
 
   // Add some state data propertie
   const [network, setNetwork] = useState("");
@@ -15,26 +15,6 @@ const NameSearch = () => {
   const [record, setRecord] = useState("");
   const [editing, setEditing] = useState(false);
   const [mints, setMints] = useState([]);
-
-  const connectWallet = async () => {
-    try {
-      const { ethereum } = window;
-
-      if (!ethereum) {
-        alert("Get MetaMask -> https://metamask.io/");
-        return;
-      }
-
-      const accounts = await ethereum.request({
-        method: "eth_requestAccounts",
-      });
-
-      console.log("Connected", accounts[0]);
-      setCurrentAccount(accounts[0]);
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
   const switchNetwork = async () => {
     if (window.ethereum) {
@@ -86,7 +66,6 @@ const NameSearch = () => {
       console.log("Make sure you have metamask!");
       return;
     } else {
-      connectWallet();
       console.log("We have the ethereum object", ethereum);
     }
 
