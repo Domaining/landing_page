@@ -6,7 +6,7 @@ import { networks } from "../../../utils/networks";
 const NameSearch = ({...props}) => {
   const {currentAccount, setCurrentAccount, connectWallet} = props;
   const tld = ".ftm";
-  const CONTRACT_ADDRESS = "0xbC4642eD76101cB4a8a16b9a3D2438affEa5d227";
+  const CONTRACT_ADDRESS = "0xd5B6Eddb65a414c9b3C8E014fe17bD55F0C8562E";
 
   // Add some state data propertie
   const [network, setNetwork] = useState("");
@@ -22,7 +22,7 @@ const NameSearch = ({...props}) => {
         // Try to switch to the Fantom testnet
         await window.ethereum.request({
           method: "wallet_switchEthereumChain",
-          params: [{ chainId: "0xfa2" }], // Check networks.js for hexadecimal network ids
+          params: [{ chainId: "0xfa" }], // Check networks.js for hexadecimal network ids
         });
       } catch (error) {
         // This error code means that the chain we want has not been added to MetaMask
@@ -33,15 +33,15 @@ const NameSearch = ({...props}) => {
               method: "wallet_addEthereumChain",
               params: [
                 {
-                  chainId: "0xfa2",
-                  chainName: "Fantom Testnet",
-                  rpcUrls: ["https://rpc.testnet.fantom.network"],
+                  chainId: "0xfa",
+                  chainName: "Fantom Mainnet",
+                  rpcUrls: ["https://rpc.fantom.network"],
                   nativeCurrency: {
-                    name: "Fantom Testnet",
+                    name: "Fantom Mainnet",
                     symbol: "FTM",
                     decimals: 18,
                   },
-                  blockExplorerUrls: ["https://testnet.ftmscan.com/"],
+                  blockExplorerUrls: ["https://ftmscan.com/"],
                 },
               ],
             });
